@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343399507394",
+    "project_id": "fire-flutter-bb422",
+    "storage_bucket": "fire-flutter-bb422.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343399507394:android:53ac0ab2bb922ef50a625b",
+        "android_client_info": {
+          "package_name": "com.example.fire_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343399507394-firi57toak7ccv3met6onieeem0eelk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu2qkShHJKiXm3GRFs_mtrj09IfyHPNOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343399507394-firi57toak7ccv3met6onieeem0eelk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
