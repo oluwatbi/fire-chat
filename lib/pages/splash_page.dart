@@ -1,6 +1,8 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sort_child_properties_last
 
-import 'package:fire_chat/commons/widgets/auth_btn.dart';
+import 'package:fire_chat/commons/widgets/black_btn.dart';
+import 'package:fire_chat/pages/login.dart';
+import 'package:fire_chat/pages/register.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -27,15 +29,23 @@ class _SplashPageState extends State<SplashPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              AuthButton(
-                title: 'login',
-              ),
+              BlackButton(
+                  title: 'Login',
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
+                  }),
               SizedBox(height: 15),
               ElevatedButton(
-                onPressed: () {},
-                child: Text("Register", style: TextStyle(color: Colors.black)),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Register()));
+                },
+                child: Text("Register",
+                    style:
+                        TextStyle(color: Colors.black, fontFamily: 'Urbanist')),
                 style: ElevatedButton.styleFrom(
-                  fixedSize: Size(311, 65),
+                  fixedSize: Size(331, 65),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
