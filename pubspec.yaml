@@ -27,15 +27,16 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cloud_firestore: ^3.4.3
   cupertino_icons: ^1.0.2
+  firebase_auth: ^3.6.2
   firebase_core: ^1.19.2
+  firebase_storage: ^10.3.4
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  cloud_firestore: ^3.4.0
-  firebase_auth: ^3.5.0
-  firebase_storage: ^10.3.3
+  equatable: ^2.0.3
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
@@ -66,14 +67,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+    #   - family: Schyler
+    #     fonts:
+    #       - asset: fonts/Schyler-Regular.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
     - family: Urbanist
       fonts:
         - asset: fonts/Urbanist.ttf
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
