@@ -1,8 +1,9 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sort_child_properties_last
 
 import 'package:fire_chat/commons/widgets/black_btn.dart';
-import 'package:fire_chat/pages/login.dart';
-import 'package:fire_chat/pages/register.dart';
+import 'package:fire_chat/authenticate/login.dart';
+import 'package:fire_chat/authenticate/register.dart';
+import 'package:fire_chat/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -13,6 +14,8 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  final Auth _auth = Auth();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -53,7 +56,36 @@ class _SplashPageState extends State<SplashPage> {
                   onPrimary: Colors.grey,
                 ),
               ),
-              SizedBox(height: 94)
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30),
+                child: TextButton(
+                  onPressed: () async {
+                    dynamic result = await _auth.signInAnonymously();
+                    if (result == null) {
+                      SnackBar(
+                        content: Text("Error signing in anonymously"),
+                        backgroundColor: Colors.red,
+                      );
+                    } else {
+                      SnackBar(
+                        content: Text("Signed in anonymously"),
+                        backgroundColor: Colors.green,
+                      );
+                      print('signed in');
+                      print(result.uid);
+                    }
+                  },
+                  child: Text(
+                    "Login as a guest",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Urbanist',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
